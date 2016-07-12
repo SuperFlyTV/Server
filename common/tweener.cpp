@@ -344,7 +344,7 @@ double ease_in_out_back (double t, double b, double c, double d, const std::vect
 	return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
 }
 	
-double ease_out_int_back (double t, double b, double c, double d, const std::vector<double>& params)
+double ease_out_in_back (double t, double b, double c, double d, const std::vector<double>& params)
 {
 	if (t < d/2) return ease_out_back (t*2, b, c/2, d, params);
 	return ease_in_back((t*2)-d, b+c/2, c/2, d, params);
@@ -423,7 +423,8 @@ const std::unordered_map<std::wstring, tween_t>& get_tweens()
 		{L"easeinback",       ease_in_back },
 		{L"easeoutback",      ease_out_back },
 		{L"easeinoutback",    ease_in_out_back },
-		{L"easeoutintback",   ease_out_int_back },
+		{L"easeoutintback",   ease_out_in_back },
+		{L"easeoutinback",    ease_out_in_back },
 		{L"easeoutbounce",    ease_out_bounce },
 		{L"easeinbounce",     ease_in_bounce },
 		{L"easeinoutbounce",  ease_in_out_bounce },
