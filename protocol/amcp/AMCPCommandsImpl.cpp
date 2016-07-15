@@ -1273,9 +1273,9 @@ void mixer_chroma_describer(core::help_sink& sink, const core::help_repository& 
 	sink.example(L">> MIXER 1-1 CHROMA green 0.10 0.20 25 easeinsine");
 	sink.example(L">> MIXER 1-1 CHROMA none");
 	sink.example(
-		L">> MIXER 1-1 BLEND\n"
+		L">> MIXER 1-1 CHROMA\n"
 		L"<< 201 MIXER OK\n"
-		L"<< SCREEN", L"for getting the current blend mode");
+		L"<< NONE 0 0 0", L"for getting the current chroma keyer");
 }
 
 std::wstring mixer_chroma_command(command_context& ctx)
